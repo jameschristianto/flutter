@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "113006652733",
+    "firebase_url": "https://laundryhouse-cb1fe-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "laundryhouse-cb1fe",
+    "storage_bucket": "laundryhouse-cb1fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113006652733:android:8b1201f9b00e28778c6954",
+        "android_client_info": {
+          "package_name": "com.example.laundry_house"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113006652733-p49papv6qq8d5gluovau2gue3hrcd12b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi64dVHkJICM9-tzti5T9YbrhPRf7g6OY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113006652733-p49papv6qq8d5gluovau2gue3hrcd12b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
