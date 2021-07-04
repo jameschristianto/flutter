@@ -34,8 +34,8 @@ class PriceMenuBody extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: double.infinity,
-        width: double.infinity,
+      height: double.infinity,
+      width: double.infinity,
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
         image: DecorationImage(

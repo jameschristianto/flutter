@@ -130,209 +130,207 @@ class _MainScreenState extends State<MainScreen> {
                   return StatefulBuilder(
                       builder: (context, setState) {
                         return AlertDialog(
-                          content: Form(
-                            key: userKey,
-                            child: Padding(
-                              padding: EdgeInsets.all(10),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Container(
-                                    padding: EdgeInsets.only(
-                                      bottom: 10,
-                                    ),
-                                    child: TextFormField(
-                                      enabled: account,
-                                      controller: _textEditingControllerName,
-                                      validator: (value) {
-                                        return value.isEmpty
-                                            ? "Please fill this field"
-                                            : null;
-                                      },
-                                      maxLines: 1,
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.deepPurpleAccent,
+                          content: SingleChildScrollView(
+                            child: Form(
+                              key: userKey,
+                              child: Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    Container(
+                                      padding: EdgeInsets.only(
+                                        bottom: 10,
                                       ),
-                                      maxLength: 30,
-                                      keyboardType: TextInputType.name,
-                                      decoration: InputDecoration(
-                                        enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        disabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        labelText: labelName,
-                                        labelStyle: TextStyle(
+                                      child: TextFormField(
+                                        enabled: account,
+                                        controller: _textEditingControllerName,
+                                        validator: (value) {
+                                          return value.isEmpty
+                                              ? "Please fill this field"
+                                              : null;
+                                        },
+                                        maxLines: 1,
+                                        style: TextStyle(
                                           fontSize: 16,
-                                          color: Colors.deepPurpleAccent
-                                              .withOpacity(0.5),
+                                          color: Colors.deepPurpleAccent,
+                                        ),
+                                        maxLength: 30,
+                                        keyboardType: TextInputType.name,
+                                        decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          disabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          errorBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          focusedErrorBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          labelText: labelName,
+                                          labelStyle: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.deepPurpleAccent
+                                                .withOpacity(0.5),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.only(
-                                      bottom: 10,
-                                    ),
-                                    child: TextFormField(
-                                      enabled: account,
-                                      controller: _textEditingControllerPhone,
-                                      validator: (value) {
-                                        return value.isEmpty
-                                            ? "Please fill this field"
-                                            : null;
-                                      },
-                                      maxLines: 1,
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.deepPurpleAccent,
+                                    Container(
+                                      padding: EdgeInsets.only(
+                                        bottom: 10,
                                       ),
-                                      maxLength: 15,
-                                      keyboardType: TextInputType.phone,
-                                      decoration: InputDecoration(
-                                        enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        disabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        labelText: labelPhone,
-                                        labelStyle: TextStyle(
+                                      child: TextFormField(
+                                        enabled: account,
+                                        controller: _textEditingControllerPhone,
+                                        validator: (value) {
+                                          return value.isEmpty
+                                              ? "Please fill this field"
+                                              : null;
+                                        },
+                                        maxLines: 1,
+                                        style: TextStyle(
                                           fontSize: 16,
-                                          color: Colors.deepPurpleAccent
-                                              .withOpacity(0.5),
+                                          color: Colors.deepPurpleAccent,
+                                        ),
+                                        maxLength: 15,
+                                        keyboardType: TextInputType.phone,
+                                        decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          disabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          errorBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          focusedErrorBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          labelText: labelPhone,
+                                          labelStyle: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.deepPurpleAccent
+                                                .withOpacity(0.5),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  Container(
-                                    padding: EdgeInsets.only(
-                                      bottom: 20,
-                                    ),
-                                    child: TextFormField(
-                                      enabled: account,
-                                      controller: _textEditingControllerEmail,
-                                      validator: (value) {
-                                        return value.isEmpty
-                                            ? "Please fill this field"
-                                            : null;
-                                      },
-                                      maxLines: 1,
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        color: Colors.deepPurpleAccent,
-                                      ),
-                                      maxLength: 30,
-                                      keyboardType: TextInputType.emailAddress,
-                                      decoration: InputDecoration(
-                                        enabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        focusedBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        disabledBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        errorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        focusedErrorBorder: OutlineInputBorder(
-                                          borderSide: BorderSide(
-                                            color: Colors.black,
-                                            width: 2,
-                                          ),
-                                          borderRadius: BorderRadius.circular(10),
-                                        ),
-                                        labelText: labelEmail,
-                                        labelStyle: TextStyle(
+                                    Container(
+                                      child: TextFormField(
+                                        enabled: account,
+                                        controller: _textEditingControllerEmail,
+                                        validator: (value) {
+                                          return value.isEmpty
+                                              ? "Please fill this field"
+                                              : null;
+                                        },
+                                        maxLines: 1,
+                                        style: TextStyle(
                                           fontSize: 16,
-                                          color: Colors.deepPurpleAccent
-                                              .withOpacity(0.5),
+                                          color: Colors.deepPurpleAccent,
+                                        ),
+                                        maxLength: 30,
+                                        keyboardType: TextInputType.emailAddress,
+                                        decoration: InputDecoration(
+                                          enabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          disabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          errorBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          focusedErrorBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color: Colors.black,
+                                              width: 2,
+                                            ),
+                                            borderRadius: BorderRadius.circular(10),
+                                          ),
+                                          labelText: labelEmail,
+                                          labelStyle: TextStyle(
+                                            fontSize: 16,
+                                            color: Colors.deepPurpleAccent
+                                                .withOpacity(0.5),
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  Container(
-                                    width: 100,
-                                    height: 50,
-                                    child: ElevatedButton(
+                                    Container(
+                                      width: 100,
+                                      height: 50,
+                                      child: ElevatedButton(
                                         child: Text(
                                           account ? 'Submit' : 'Edit',
                                           style: TextStyle( // your text
@@ -393,9 +391,10 @@ class _MainScreenState extends State<MainScreen> {
                                             });
                                           }
                                         }
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),
